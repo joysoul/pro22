@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import { KLineData, Styles, DeepPartial } from 'klinecharts'
+import { KLineData, Styles, DeepPartial,Overlay, OverlayCreate, OverlayRemove,Nullable } from 'klinecharts'
 
 export interface SymbolInfo {
   ticker: string
@@ -71,4 +71,8 @@ export interface ChartPro {
   getSymbol(): SymbolInfo
   setPeriod(period: Period): void
   getPeriod(): Period
+  createOverlay: (value: string | OverlayCreate, paneId?: string) => Nullable<string>
+  getOverlayById: (id: string) => Nullable<Overlay>
+  overrideOverlay: (override: Partial<OverlayCreate>) => void
+  removeOverlay: (remove?: string | OverlayRemove) => void
 }
