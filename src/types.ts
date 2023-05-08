@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import { KLineData, Styles, DeepPartial,Overlay, OverlayCreate, OverlayRemove,Nullable } from 'klinecharts'
+import { KLineData, Styles, DeepPartial,Overlay, OverlayCreate, OverlayRemove,Nullable,VisibleRange } from 'klinecharts'
 
 export interface SymbolInfo {
   ticker: string
@@ -77,4 +77,5 @@ export interface ChartPro {
   removeOverlay: (remove?: string | OverlayRemove) => void
   scrollToTimestamp: (timestamp: number, animationDuration?: number) => void
   scrollToRealTime: (animationDuration?: number) => void
+  getVisibleRange: () => VisibleRange
 }

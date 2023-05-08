@@ -37,7 +37,7 @@ import {
   DomPosition,
   FormatDateType,
   OverlayCreate,
-  OverlayRemove, 
+  OverlayRemove,
 } from "klinecharts";
 
 import lodashSet from "lodash/set";
@@ -178,9 +178,10 @@ const ChartProComponent: Component<ChartProComponentProps> = (props) => {
     removeOverlay: (remove?: string | OverlayRemove) =>
       widget!.removeOverlay(remove),
     scrollToTimestamp: (timestamp: number, animationDuration?: number) =>
-      widget!.scrollToTimestamp(timestamp,animationDuration),
+      widget!.scrollToTimestamp(timestamp, animationDuration),
     scrollToRealTime: (animationDuration?: number) =>
       widget!.scrollToRealTime(animationDuration),
+    getVisibleRange: () => widget!.getVisibleRange(),
   });
 
   const documentResize = () => {

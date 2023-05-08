@@ -22,6 +22,7 @@ import {
   Overlay,
   OverlayCreate,
   OverlayRemove,
+  VisibleRange,
 } from "klinecharts";
 
 import ChartProComponent from "./ChartProComponent";
@@ -155,9 +156,12 @@ export default class KLineChartPro implements ChartPro {
     return this._chartApi!.removeOverlay(remove);
   }
   scrollToTimestamp(timestamp: number, animationDuration?: number): void {
-    return this._chartApi!.scrollToTimestamp(timestamp,animationDuration);
+    return this._chartApi!.scrollToTimestamp(timestamp, animationDuration);
   }
-  scrollToRealTime(animationDuration?: number) : void {
+  scrollToRealTime(animationDuration?: number): void {
     return this._chartApi!.scrollToRealTime(animationDuration);
+  }
+  getVisibleRange(): VisibleRange {
+    return this._chartApi!.getVisibleRange();
   }
 }
