@@ -37,7 +37,7 @@ import {
   DomPosition,
   FormatDateType,
   OverlayCreate,
-  OverlayRemove,
+  OverlayRemove, 
 } from "klinecharts";
 
 import lodashSet from "lodash/set";
