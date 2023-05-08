@@ -75,4 +75,6 @@ export interface ChartPro {
   getOverlayById: (id: string) => Nullable<Overlay>
   overrideOverlay: (override: Partial<OverlayCreate>) => void
   removeOverlay: (remove?: string | OverlayRemove) => void
+  scrollToTimestamp: (timestamp: number, animationDuration?: number) => void
+  scrollToRealTime: (animationDuration?: number) => void
 }

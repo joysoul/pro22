@@ -154,4 +154,10 @@ export default class KLineChartPro implements ChartPro {
   removeOverlay(remove?: string | OverlayRemove): void {
     return this._chartApi!.removeOverlay(remove);
   }
+  scrollToTimestamp(timestamp: number, animationDuration?: number): void {
+    return this._chartApi!.scrollToTimestamp(timestamp,animationDuration);
+  }
+  scrollToRealTime(animationDuration?: number) : void {
+    return this._chartApi!.scrollToRealTime(animationDuration);
+  }
 }

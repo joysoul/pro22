@@ -177,6 +177,10 @@ const ChartProComponent: Component<ChartProComponentProps> = (props) => {
       widget!.overrideOverlay(override),
     removeOverlay: (remove?: string | OverlayRemove) =>
       widget!.removeOverlay(remove),
+    scrollToTimestamp: (timestamp: number, animationDuration?: number) =>
+      widget!.scrollToTimestamp(timestamp,animationDuration),
+    scrollToRealTime: (animationDuration?: number) =>
+      widget!.scrollToRealTime(animationDuration),
   });
 
   const documentResize = () => {
